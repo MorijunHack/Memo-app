@@ -2,12 +2,12 @@ import { createStore } from 'redux';
 
 const initData = {
     data: [{message:'sample data', created:new Date()}],
-    message: 'please typemessage: ',
+    message: 'please type message: ',
     mode: 'default',
     fdata:[]
 };
 
-exxport function memoReducer(state = initData, action){
+export function memoReducer(state = initData, action){
     switch (action.type){
         case 'ADD':
             return addReduce(state, action);
@@ -29,6 +29,7 @@ function addReduce(state, action) {
         created: new Date()
     };
     let newdata = state.data.slice();
+    newdata.unshift(data);
     return {
         data: newdata,
         message: 'Added!!',
@@ -85,4 +86,6 @@ export function findMemo(text){
     }
 }
 
-export default createStore(memoReducer);
+let MemoStore = createStore(memoReducer); 
+
+export default MemoStore;

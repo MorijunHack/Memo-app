@@ -7,20 +7,19 @@ class Memo extends Component {
     render(){
         let data;
         let n = 0;
-
         switch (this.props.mode){
             case 'default':
                 data = this.props.data.map((value) => (
                     <Item key={value.message} value={value} index={n++} />
                 ));
             break;
-
+            
             case 'find':
-                data = this.props.fdata.map((value)=>(
+                data = this.props.fdata.map((value) => (
                     <Item key={value.message} value={value} index={n++} />
                 ));
             break;
-
+            
             case 'delete':
                 data = this.props.data.map((value)=>(
                     <Item key={value.message} value={value} index={n++} />
@@ -28,7 +27,7 @@ class Memo extends Component {
             break;
 
             default:
-                data = this.props.data.map((value)=>(
+                data = this.props.data.map((value) => (
                     <Item key={value.message} value={value} index={n++} />
                 ));
         }
@@ -39,4 +38,4 @@ class Memo extends Component {
     }
 }
 
-export default connect((state) => state)(Memo);
+export default connect((state)=>state)(Memo);
