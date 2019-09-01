@@ -25,7 +25,7 @@ class DelForm extends Component {
     }
 
     doChange(e) {
-        this.setState = ({
+        this.setState({
             number: e.target.value
         });
     }
