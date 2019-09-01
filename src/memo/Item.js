@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 class Item extends Component {
     th = {
         fontSize: "14pt",
-        backgrount: "blue",
+        background: "blue",
         color: "white",
         padding: "5px 10px",
         width: "50px"
@@ -34,7 +34,7 @@ class Item extends Component {
 
         return (
             <tr>
-                <th style={this.th}>No, {this.props.index}</th>
+                <th style={this.th}>No. {this.props.index}</th>
                 <td style={this.td}>{this.props.value.message}</td>
                 <td style={this.td}>{f}</td>
             </tr>
