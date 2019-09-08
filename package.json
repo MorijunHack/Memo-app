@@ -3,8 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@waves/waves-crypto": "^3.0.17",
-    "@waves/waves-transactions": "^3.16.3",
     "animate.css": "^3.7.2",
     "firebase": "^6.5.0",
     "react": "^16.9.0",
